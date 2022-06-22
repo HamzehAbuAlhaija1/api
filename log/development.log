@@ -1,0 +1,1454 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1643414204985860790', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateBooks (20220620083022)
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE `books` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `author` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1643414204985860790')[0m
+  [1m[35m (872.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (856.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('5960876875635806355', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateBooks (20220620083022)
+  [1m[35m (489.5ms)[0m  [1m[35mCREATE TABLE `books` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `author` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220620083022')[0m
+  [1m[36mTRANSACTION (78.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-06-20 08:35:29.881837', '2022-06-20 08:35:29.881837')[0m
+  [1m[36mTRANSACTION (79.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5960876875635806355')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO `books` (`name`, `author`, `created_at`, `updated_at`) VALUES ('english', 'hamzeh', '2022-06-20 08:35:36.626900', '2022-06-20 08:35:36.626900')[0m
+  [1m[36mTRANSACTION (105.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.7ms)[0m  [1m[32mINSERT INTO `books` (`name`, `author`, `created_at`, `updated_at`) VALUES ('arabic', 'ahmad', '2022-06-20 08:35:36.736576', '2022-06-20 08:35:36.736576')[0m
+  [1m[36mTRANSACTION (204.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.7ms)[0m  [1m[32mINSERT INTO `books` (`name`, `author`, `created_at`, `updated_at`) VALUES ('hebrow', 'mohamd', '2022-06-20 08:35:36.949513', '2022-06-20 08:35:36.949513')[0m
+  [1m[36mTRANSACTION (140.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (32.1ms)[0m  [1m[32mINSERT INTO `books` (`name`, `author`, `created_at`, `updated_at`) VALUES ('turkish', 'saleh', '2022-06-20 08:35:37.099143', '2022-06-20 08:35:37.099143')[0m
+  [1m[36mTRANSACTION (127.9ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/book%0A" for 127.0.0.1 at 2022-06-20 11:49:58 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/book%0A"):
+  
+Started GET "/books%0A" for 127.0.0.1 at 2022-06-20 11:50:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/books%0A"):
+  
+Started GET "/book%0A" for 127.0.0.1 at 2022-06-20 11:50:42 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/book%0A"):
+  
+Started GET "/book%0A" for 127.0.0.1 at 2022-06-20 11:50:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/book%0A"):
+  
+Started GET "/book/read%0A" for 127.0.0.1 at 2022-06-20 11:52:29 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for BookController):
+  
+actionpack (7.0.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (7.0.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/book/read%0A" for 127.0.0.1 at 2022-06-20 11:53:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for BookController):
+  
+actionpack (7.0.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (7.0.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/book/read%0A" for 127.0.0.1 at 2022-06-20 11:54:11 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for BookController):
+  
+actionpack (7.0.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (7.0.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/book/read%0A" for 127.0.0.1 at 2022-06-20 11:58:47 +0300
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for BookController):
+  
+actionpack (7.0.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (7.0.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/book/read%0A" for 127.0.0.1 at 2022-06-20 11:59:36 +0300
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for BookController):
+  
+actionpack (7.0.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (7.0.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/book/read%0A" for 127.0.0.1 at 2022-06-20 12:05:09 +0300
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for BookController):
+  
+actionpack (7.0.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (7.0.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/book/read/23" for 127.0.0.1 at 2022-06-20 12:06:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/book/read/23"):
+  
+Started GET "/book/read/" for 127.0.0.1 at 2022-06-20 12:06:48 +0300
+Processing by BookController#read as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/controllers/book_controller.rb:6:in `read'
+Completed 200 OK in 20ms (Views: 8.5ms | ActiveRecord: 2.5ms | Allocations: 21588)
+
+
+Started GET "/book/read/" for 127.0.0.1 at 2022-06-20 12:06:49 +0300
+Processing by BookController#read as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/controllers/book_controller.rb:6:in `read'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1102)
+
+
+Started GET "/book/read/" for 127.0.0.1 at 2022-06-20 12:08:51 +0300
+Processing by BookController#read as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/controllers/book_controller.rb:6:in `read'
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 2.6ms | Allocations: 3379)
+
+
+Started GET "/book/read/" for 127.0.0.1 at 2022-06-20 12:09:06 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BookController#read as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/controllers/book_controller.rb:6:in `read'
+Completed 200 OK in 16ms (Views: 5.9ms | ActiveRecord: 2.4ms | Allocations: 19806)
+
+
+Started GET "/book/read/" for 127.0.0.1 at 2022-06-20 12:09:29 +0300
+Processing by BookController#read as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/controllers/book_controller.rb:6:in `read'
+Completed 201 Created in 6ms (Views: 2.9ms | ActiveRecord: 2.3ms | Allocations: 3379)
+
+
+Started GET "/book/read/" for 127.0.0.1 at 2022-06-20 12:09:40 +0300
+Processing by BookController#read as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/controllers/book_controller.rb:6:in `read'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 2.3ms | Allocations: 3368)
+
+
+Started POST "/book/" for 127.0.0.1 at 2022-06-20 12:26:29 +0300
+  
+SyntaxError (/home/hamzeh/Desktop/api/project/app/controllers/book_controller.rb:28: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/book_controller.rb:28: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/book_controller.rb:28: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/book/" for 127.0.0.1 at 2022-06-20 12:27:25 +0300
+  
+SyntaxError (/home/hamzeh/Desktop/api/project/app/controllers/book_controller.rb:28: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/book_controller.rb:28: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/book_controller.rb:28: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/book/" for 127.0.0.1 at 2022-06-20 12:27:38 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/home/hamzeh/Desktop/api/project/app/controllers/book_controller.rb:28: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/book_controller.rb:28: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/book_controller.rb:28: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/book/" for 127.0.0.1 at 2022-06-20 12:28:24 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BookController#create as */*
+  Parameters: {"name"=>"ali", "author"=>"samah"}
+Completed 400 Bad Request in 8ms (ActiveRecord: 0.0ms | Allocations: 15832)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: book):
+  
+app/controllers/book_controller.rb:26:in `book_params'
+app/controllers/book_controller.rb:3:in `create'
+Started POST "/book/?name=hhhh&author=aaaa" for 127.0.0.1 at 2022-06-20 12:29:18 +0300
+Processing by BookController#create as */*
+  Parameters: {"name"=>"hhhh", "author"=>"aaaa"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 151)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: book):
+  
+app/controllers/book_controller.rb:26:in `book_params'
+app/controllers/book_controller.rb:3:in `create'
+Started POST "/book/" for 127.0.0.1 at 2022-06-20 12:32:10 +0300
+Processing by BookController#create as */*
+  Parameters: {"name"=>"ali", "author"=>"samah"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 131)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: book):
+  
+app/controllers/book_controller.rb:26:in `book_params'
+app/controllers/book_controller.rb:3:in `create'
+Started POST "/book/?name=hhhh&author=aaaa" for 127.0.0.1 at 2022-06-20 12:32:50 +0300
+Processing by BookController#create as */*
+  Parameters: {"name"=>"hhhh", "author"=>"aaaa"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 131)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: book):
+  
+app/controllers/book_controller.rb:26:in `book_params'
+app/controllers/book_controller.rb:3:in `create'
+Started POST "/book/" for 127.0.0.1 at 2022-06-20 12:39:22 +0300
+Processing by BookController#create as */*
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:4:in `create'
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO `books` (`name`, `author`, `created_at`, `updated_at`) VALUES ('hi', '23', '2022-06-20 09:39:22.470283', '2022-06-20 09:39:22.470283')[0m
+  ↳ app/controllers/book_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (154.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:4:in `create'
+Completed 201 Created in 169ms (Views: 0.6ms | ActiveRecord: 157.8ms | Allocations: 8224)
+
+
+Started POST "/book/read/" for 127.0.0.1 at 2022-06-20 12:39:32 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/book/read"):
+  
+Started GET "/book/read/" for 127.0.0.1 at 2022-06-20 12:39:48 +0300
+Processing by BookController#read as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/controllers/book_controller.rb:12:in `read'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1422)
+
+
+Started POST "/book/" for 127.0.0.1 at 2022-06-20 12:42:03 +0300
+Processing by BookController#create as */*
+  Parameters: {"name"=>"ali", "author"=>"samah"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 745)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: book):
+  
+app/controllers/book_controller.rb:27:in `book_params'
+app/controllers/book_controller.rb:3:in `create'
+Started POST "/book/?name=hhhh&author=aaaa" for 127.0.0.1 at 2022-06-20 12:42:12 +0300
+Processing by BookController#create as */*
+  Parameters: {"name"=>"hhhh", "author"=>"aaaa"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 145)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: book):
+  
+app/controllers/book_controller.rb:27:in `book_params'
+app/controllers/book_controller.rb:3:in `create'
+Started POST "/book/" for 127.0.0.1 at 2022-06-20 12:43:09 +0300
+Processing by BookController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 123)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: book):
+  
+app/controllers/book_controller.rb:27:in `book_params'
+app/controllers/book_controller.rb:3:in `create'
+Started POST "/book/" for 127.0.0.1 at 2022-06-20 12:43:31 +0300
+Processing by BookController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 123)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: book):
+  
+app/controllers/book_controller.rb:27:in `book_params'
+app/controllers/book_controller.rb:3:in `create'
+Started POST "/book/" for 127.0.0.1 at 2022-06-20 12:45:38 +0300
+Processing by BookController#create as */*
+  Parameters: {"book"=>{"name"=>"yuio", "author"=>"cvbnm"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:4:in `create'
+  [1m[36mBook Create (0.2ms)[0m  [1m[32mINSERT INTO `books` (`name`, `author`, `created_at`, `updated_at`) VALUES ('yuio', 'cvbnm', '2022-06-20 09:45:38.607289', '2022-06-20 09:45:38.607289')[0m
+  ↳ app/controllers/book_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (191.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:4:in `create'
+Completed 201 Created in 201ms (Views: 0.8ms | ActiveRecord: 194.2ms | Allocations: 3617)
+
+
+Started GET "/book/read/" for 127.0.0.1 at 2022-06-20 12:46:01 +0300
+Processing by BookController#read as */*
+  Parameters: {"book"=>{"name"=>"yuio", "author"=>"cvbnm"}}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/controllers/book_controller.rb:12:in `read'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 1339)
+
+
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:14:02 +0300
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for BookController):
+  
+actionpack (7.0.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (7.0.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:15:48 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"book"=>{"name"=>"yuio", "author"=>"cvbnm"}, "id"=>"1"}
+Completed 500 Internal Server Error in 1ms (Allocations: 625)
+
+
+  
+NoMethodError (undefined method `destory' for nil:NilClass):
+  
+app/controllers/book_controller.rb:19:in `destroy'
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:16:10 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"book"=>{"name"=>"yuio", "author"=>"cvbnm"}, "id"=>"1"}
+Completed 500 Internal Server Error in 1ms (Allocations: 592)
+
+
+  
+NoMethodError (undefined method `destory' for nil:NilClass):
+  
+app/controllers/book_controller.rb:19:in `destroy'
+Started DELETE "/book/1/" for 127.0.0.1 at 2022-06-20 13:16:37 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"book"=>{"name"=>"yuio", "author"=>"cvbnm"}, "id"=>"1"}
+Completed 500 Internal Server Error in 1ms (Allocations: 510)
+
+
+  
+NoMethodError (undefined method `destory' for nil:NilClass):
+  
+app/controllers/book_controller.rb:19:in `destroy'
+Started DELETE "/book/1/" for 127.0.0.1 at 2022-06-20 13:16:49 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"book"=>{"name"=>"yuio", "author"=>"cvbnm"}, "id"=>"1"}
+Completed 500 Internal Server Error in 1ms (Allocations: 511)
+
+
+  
+NoMethodError (undefined method `destory' for nil:NilClass):
+  
+app/controllers/book_controller.rb:19:in `destroy'
+Started DELETE "/book/2/" for 127.0.0.1 at 2022-06-20 13:17:00 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"book"=>{"name"=>"yuio", "author"=>"cvbnm"}, "id"=>"2"}
+Completed 500 Internal Server Error in 1ms (Allocations: 510)
+
+
+  
+NoMethodError (undefined method `destory' for nil:NilClass):
+  
+app/controllers/book_controller.rb:19:in `destroy'
+Started DELETE "/book/2/" for 127.0.0.1 at 2022-06-20 13:17:06 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 1ms (Allocations: 510)
+
+
+  
+NoMethodError (undefined method `destory' for nil:NilClass):
+  
+app/controllers/book_controller.rb:19:in `destroy'
+Started DELETE "/book/1/" for 127.0.0.1 at 2022-06-20 13:17:10 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (Allocations: 510)
+
+
+  
+NoMethodError (undefined method `destory' for nil:NilClass):
+  
+app/controllers/book_controller.rb:19:in `destroy'
+Started DELETE "/book/1/" for 127.0.0.1 at 2022-06-20 13:17:32 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (Allocations: 589)
+
+
+  
+NoMethodError (undefined method `destory' for nil:NilClass):
+  
+app/controllers/book_controller.rb:19:in `destroy'
+Started GET "/book/1/" for 127.0.0.1 at 2022-06-20 13:17:39 +0300
+Processing by BookController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (Allocations: 47)
+
+
+Started GET "/book/1/" for 127.0.0.1 at 2022-06-20 13:18:30 +0300
+Processing by BookController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 204 No Content in 0ms (Allocations: 28)
+
+
+Started DELETE "/book/1/" for 127.0.0.1 at 2022-06-20 13:19:00 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (Allocations: 510)
+
+
+  
+NoMethodError (undefined method `destory' for nil:NilClass):
+  
+app/controllers/book_controller.rb:19:in `destroy'
+Started DELETE "/book/1/" for 127.0.0.1 at 2022-06-20 13:19:21 +0300
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for BookController
+Did you mean?  destory):
+  
+actionpack (7.0.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (7.0.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started DELETE "/book/1/" for 127.0.0.1 at 2022-06-20 13:20:12 +0300
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for BookController
+Did you mean?  destory):
+  
+actionpack (7.0.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (7.0.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started DELETE "/book/1/" for 127.0.0.1 at 2022-06-20 13:21:08 +0300
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for BookController
+Did you mean?  destory):
+  
+actionpack (7.0.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (7.0.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started DELETE "/book/1/" for 127.0.0.1 at 2022-06-20 13:21:41 +0300
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for BookController
+Did you mean?  destory):
+  
+actionpack (7.0.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (7.0.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started DELETE "/book/1/" for 127.0.0.1 at 2022-06-20 13:23:00 +0300
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for BookController
+Did you mean?  destory):
+  
+actionpack (7.0.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (7.0.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started DELETE "/book/1/" for 127.0.0.1 at 2022-06-20 13:23:08 +0300
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for BookController
+Did you mean?  destory):
+  
+actionpack (7.0.3) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.3.1) lib/rack/etag.rb:27:in `call'
+rack (2.2.3.1) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3.1) lib/rack/head.rb:12:in `call'
+activerecord (7.0.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3.1) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3.1) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started DELETE "/book/1/" for 127.0.0.1 at 2022-06-20 13:23:47 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 239)
+
+
+Started DELETE "/book/1/" for 127.0.0.1 at 2022-06-20 13:24:26 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 234)
+
+
+Started DELETE "/book/1/" for 127.0.0.1 at 2022-06-20 13:24:30 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 233)
+
+
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:25:04 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 80)
+
+
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:25:17 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 80)
+
+
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:26:41 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 4049)
+
+
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:27:25 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:27:51 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:28:16 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:28:35 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 80)
+
+
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:28:40 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 3.1ms | Allocations: 3384)
+
+
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:29:27 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 2.6ms | Allocations: 3203)
+
+
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:31:01 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 240)
+
+
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:31:07 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:33:12 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 626)
+
+
+  
+NoMethodError (undefined method `show' for nil:NilClass):
+  
+app/controllers/book_controller.rb:20:in `destroy'
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:33:52 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 511)
+
+
+  
+NoMethodError (undefined method `show' for nil:NilClass):
+  
+app/controllers/book_controller.rb:20:in `destroy'
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:33:57 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:34:23 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 3176)
+
+
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:36:51 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 626)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/book_controller.rb:20:in `destroy'
+Started DELETE "/book/1" for 127.0.0.1 at 2022-06-20 13:37:41 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+  [1m[36mBook Destroy (0.2ms)[0m  [1m[31mDELETE FROM `books` WHERE `books`.`id` = 1[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+  [1m[36mTRANSACTION (77.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+Completed 204 No Content in 87ms (ActiveRecord: 79.7ms | Allocations: 4541)
+
+
+Started DELETE "/book/read/" for 127.0.0.1 at 2022-06-20 13:37:48 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"read"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 576)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book with 'id'=read):
+  
+app/controllers/book_controller.rb:20:in `destroy'
+Started DELETE "/book/read/" for 127.0.0.1 at 2022-06-20 13:38:01 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"read"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms | Allocations: 539)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book with 'id'=read):
+  
+app/controllers/book_controller.rb:20:in `destroy'
+Started GET "/book/read/" for 127.0.0.1 at 2022-06-20 13:38:24 +0300
+Processing by BookController#read as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/controllers/book_controller.rb:13:in `read'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1222)
+
+
+Started DELETE "/book/2" for 127.0.0.1 at 2022-06-20 13:39:36 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 625)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/book_controller.rb:20:in `destroy'
+Started DELETE "/book/2" for 127.0.0.1 at 2022-06-20 13:41:46 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 623)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/book_controller.rb:20:in `destroy'
+Started DELETE "/book/2" for 127.0.0.1 at 2022-06-20 13:44:00 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:21:in `destroy'
+  [1m[36mBook Destroy (0.2ms)[0m  [1m[31mDELETE FROM `books` WHERE `books`.`id` = 2[0m
+  ↳ app/controllers/book_controller.rb:21:in `destroy'
+  [1m[36mTRANSACTION (206.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:21:in `destroy'
+Completed 204 No Content in 216ms (ActiveRecord: 208.9ms | Allocations: 4410)
+
+
+Started GET "/book/read/" for 127.0.0.1 at 2022-06-20 13:44:07 +0300
+Processing by BookController#read as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/controllers/book_controller.rb:13:in `read'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1168)
+
+
+Started GET "/book/read/" for 127.0.0.1 at 2022-06-20 13:45:04 +0300
+Processing by BookController#read as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/controllers/book_controller.rb:13:in `read'
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 2.8ms | Allocations: 3395)
+
+
+Started DELETE "/book/3" for 127.0.0.1 at 2022-06-20 13:45:14 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:21:in `destroy'
+  [1m[36mBook Destroy (0.2ms)[0m  [1m[31mDELETE FROM `books` WHERE `books`.`id` = 3[0m
+  ↳ app/controllers/book_controller.rb:21:in `destroy'
+  [1m[36mTRANSACTION (145.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:21:in `destroy'
+Completed 200 OK in 151ms (Views: 0.3ms | ActiveRecord: 146.0ms | Allocations: 2205)
+
+
+Started DELETE "/book/3" for 127.0.0.1 at 2022-06-20 13:45:30 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+Completed 404 Not Found in 5ms (ActiveRecord: 2.3ms | Allocations: 2099)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book with 'id'=3):
+  
+app/controllers/book_controller.rb:20:in `destroy'
+Started DELETE "/book/4" for 127.0.0.1 at 2022-06-20 13:45:48 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"4"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 239)
+
+
+Started DELETE "/book/4" for 127.0.0.1 at 2022-06-20 13:46:18 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 626)
+
+
+  
+NoMethodError (undefined method `all' for nil:NilClass):
+  
+app/controllers/book_controller.rb:21:in `destroy'
+Started DELETE "/book/4" for 127.0.0.1 at 2022-06-20 13:48:19 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 624)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/book_controller.rb:20:in `destroy'
+Started DELETE "/book/4" for 127.0.0.1 at 2022-06-20 13:48:37 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 624)
+
+
+  
+NoMethodError (undefined method `all' for nil:NilClass):
+  
+app/controllers/book_controller.rb:20:in `destroy'
+Started DELETE "/book/4" for 127.0.0.1 at 2022-06-20 13:49:11 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 624)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/book_controller.rb:20:in `destroy'
+Started DELETE "/book/4" for 127.0.0.1 at 2022-06-20 13:50:38 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"4"}
+Completed 404 Not Found in 3ms (ActiveRecord: 1.4ms | Allocations: 1125)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book without an ID):
+  
+app/controllers/book_controller.rb:20:in `destroy'
+Started DELETE "/book/5" for 127.0.0.1 at 2022-06-20 13:50:46 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"5"}
+Completed 404 Not Found in 0ms (ActiveRecord: 0.0ms | Allocations: 132)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book without an ID):
+  
+app/controllers/book_controller.rb:20:in `destroy'
+Started DELETE "/book/5" for 127.0.0.1 at 2022-06-20 13:51:40 +0300
+  
+SyntaxError (/home/hamzeh/Desktop/api/project/app/controllers/book_controller.rb:20: syntax error, unexpected '(', expecting ')'
+ Book.destroy(@book(params[:id]))
+                   ^
+/home/hamzeh/Desktop/api/project/app/controllers/book_controller.rb:20: syntax error, unexpected ')', expecting `end'
+...Book.destroy(@book(params[:id]))
+...                              ^
+/home/hamzeh/Desktop/api/project/app/controllers/book_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/book_controller.rb:20: syntax error, unexpected '(', expecting ')'
+app/controllers/book_controller.rb:20: syntax error, unexpected ')', expecting `end'
+app/controllers/book_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/book_controller.rb:20: syntax error, unexpected '(', expecting ')'
+app/controllers/book_controller.rb:20: syntax error, unexpected ')', expecting `end'
+app/controllers/book_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'
+Started DELETE "/book/5" for 127.0.0.1 at 2022-06-20 13:51:58 +0300
+Processing by BookController#destroy as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+  [1m[36mBook Destroy (0.1ms)[0m  [1m[31mDELETE FROM `books` WHERE `books`.`id` = 5[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+  [1m[36mTRANSACTION (210.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:20:in `destroy'
+Completed 204 No Content in 219ms (ActiveRecord: 212.6ms | Allocations: 4466)
+
+
+Started POST "/book/" for 127.0.0.1 at 2022-06-20 13:52:46 +0300
+Processing by BookController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 163)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: book):
+  
+app/controllers/book_controller.rb:26:in `book_params'
+app/controllers/book_controller.rb:4:in `create'
+Started POST "/book/" for 127.0.0.1 at 2022-06-20 13:52:54 +0300
+Processing by BookController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 124)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: book):
+  
+app/controllers/book_controller.rb:26:in `book_params'
+app/controllers/book_controller.rb:4:in `create'
+Started POST "/book/" for 127.0.0.1 at 2022-06-20 13:53:17 +0300
+Processing by BookController#create as */*
+  Parameters: {"book"=>{"name"=>"yuio", "author"=>"cvbnm"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:5:in `create'
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO `books` (`name`, `author`, `created_at`, `updated_at`) VALUES ('yuio', 'cvbnm', '2022-06-20 10:53:17.256132', '2022-06-20 10:53:17.256132')[0m
+  ↳ app/controllers/book_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (167.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:5:in `create'
+Completed 201 Created in 173ms (Views: 0.9ms | ActiveRecord: 167.6ms | Allocations: 2049)
+
+
+Started POST "/book/" for 127.0.0.1 at 2022-06-20 13:53:18 +0300
+Processing by BookController#create as */*
+  Parameters: {"book"=>{"name"=>"yuio", "author"=>"cvbnm"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:5:in `create'
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO `books` (`name`, `author`, `created_at`, `updated_at`) VALUES ('yuio', 'cvbnm', '2022-06-20 10:53:18.619137', '2022-06-20 10:53:18.619137')[0m
+  ↳ app/controllers/book_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (181.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:5:in `create'
+Completed 201 Created in 187ms (Views: 0.7ms | ActiveRecord: 182.1ms | Allocations: 1862)
+
+
+Started POST "/book/" for 127.0.0.1 at 2022-06-20 13:53:19 +0300
+Processing by BookController#create as */*
+  Parameters: {"book"=>{"name"=>"yuio", "author"=>"cvbnm"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:5:in `create'
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO `books` (`name`, `author`, `created_at`, `updated_at`) VALUES ('yuio', 'cvbnm', '2022-06-20 10:53:19.713024', '2022-06-20 10:53:19.713024')[0m
+  ↳ app/controllers/book_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (87.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:5:in `create'
+Completed 201 Created in 93ms (Views: 1.0ms | ActiveRecord: 87.8ms | Allocations: 1860)
+
+
+Started GET "/book/read/" for 127.0.0.1 at 2022-06-20 13:53:27 +0300
+Processing by BookController#read as */*
+  Parameters: {"book"=>{"name"=>"yuio", "author"=>"cvbnm"}}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/controllers/book_controller.rb:13:in `read'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1140)
+
+
+Started PUT "/book/1" for 127.0.0.1 at 2022-06-20 13:56:39 +0300
+Processing by BookController#update as */*
+  Parameters: {"book"=>{"name"=>"ali", "author"=>"arabic"}, "id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 687)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/book_controller.rb:17:in `update'
+Started PUT "/book/1" for 127.0.0.1 at 2022-06-20 13:57:12 +0300
+Processing by BookController#update as */*
+  Parameters: {"book"=>{"name"=>"ali", "author"=>"arabic"}, "id"=>"1"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 686)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/book_controller.rb:17:in `update'
+Started PUT "/book/6" for 127.0.0.1 at 2022-06-20 13:57:21 +0300
+Processing by BookController#update as */*
+  Parameters: {"book"=>{"name"=>"ali", "author"=>"arabic"}, "id"=>"6"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 556)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/book_controller.rb:17:in `update'
+Started PUT "/book/6" for 127.0.0.1 at 2022-06-20 13:58:51 +0300
+Processing by BookController#update as */*
+  Parameters: {"book"=>{"name"=>"ali", "author"=>"arabic"}, "id"=>"6"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/book_controller.rb:17:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_controller.rb:18:in `update'
+  [1m[36mBook Update (0.3ms)[0m  [1m[33mUPDATE `books` SET `books`.`name` = 'ali', `books`.`author` = 'arabic', `books`.`updated_at` = '2022-06-20 10:58:51.628808' WHERE `books`.`id` = 6[0m
+  ↳ app/controllers/book_controller.rb:18:in `update'
+  [1m[36mTRANSACTION (159.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_controller.rb:18:in `update'
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 161.7ms | Allocations: 6612)
+
+
+  
+NameError (undefined local variable or method `book' for #<BookController:0x000000000ad160>
+Did you mean?  book1):
+  
+app/controllers/book_controller.rb:19:in `update'
+Started PUT "/book/6" for 127.0.0.1 at 2022-06-20 13:59:20 +0300
+Processing by BookController#update as */*
+  Parameters: {"book"=>{"name"=>"ali", "author"=>"arabic"}, "id"=>"6"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/book_controller.rb:17:in `update'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.3ms | Allocations: 4773)
+
+
+  
+NameError (undefined local variable or method `book' for #<BookController:0x000000000b10a8>
+Did you mean?  book1):
+  
+app/controllers/book_controller.rb:19:in `update'
+Started PUT "/book/6" for 127.0.0.1 at 2022-06-20 14:00:19 +0300
+Processing by BookController#update as */*
+  Parameters: {"book"=>{"name"=>"ali", "author"=>"arabic"}, "id"=>"6"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT `books`.* FROM `books` WHERE `books`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/book_controller.rb:17:in `update'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 2900)
+
+
+Started GET "/book/read/" for 127.0.0.1 at 2022-06-20 14:00:32 +0300
+Processing by BookController#read as */*
+  Parameters: {"book"=>{"name"=>"ali", "author"=>"arabic"}}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT `books`.* FROM `books`[0m
+  ↳ app/controllers/book_controller.rb:13:in `read'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 1144)
+
+
+Started GET "/admins/new" for 127.0.0.1 at 2022-06-21 13:14:26 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (25.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/admins/new"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-06-21 13:14:26 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
